@@ -3,3 +3,20 @@
     background-color: #000000;
     color: #FFFFFF;
 }
+
+nav ul {
+    list-style: none;
+    display: flex;  /* Macht die Liste horizontal */
+    gap: 20px;     /* Abstand zwischen den Einträgen */
+    padding: 0px;
+    margin: 0.5em;
+
+}
+
+.newsArticle {
+    border: 2px solid #FFFFFF;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 30%;
+    height: auto;
+}

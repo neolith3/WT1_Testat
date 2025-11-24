@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="CH-DE">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Kontaktformular</title>
+</head>
+
+<body>
+    <header>
+        <h1>Kontakt</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="about.html">Über mich</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li>Kontakt</li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Beschreibe uns dein Anliegen.</h2>
+            <form id="contactForm" action="#" method="post">
+                <label for="firstname">Vorname:
+                <input type="text" id="firstname" name="firstname" required placeholder="John"></label><br><br>
+                <label for="lastname">Nachname:
+                <input type="text" id="lastname" name="lastname" required placeholder="Doe"></label><br><br>
+                <label for="email">E-Mail:                    
+                <input type="email" id="email" name="email" required placeholder="john.doe@mail.com"></label><br><br>
+                <label for="consultationType">Kategorie:
+                    <select name="consultationType" id="consultationType">
+                        <option value="topicRequest">Themenvorschlag</option>
+                        <option value="support">Technischer Support</option>
+                        <option value="feedback">Feedback zum Inhalt</option>
+                    </select>
+                </label><br><br>
+                <label for="message">Nachricht:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required placeholder="Mein Anliegen ..."></textarea><br><br>
+                <input type="submit" value="Absenden">
+            </form>
+            <script>
+                (function() {
+                    const form = document.getElementById('contactForm');
+                    form.addEventListener('submit', function(event) {
+                        
+                        event.preventDefault();
+
+                        if (!form.checkValidity()) {
+                            // Native Browser Meldungen für ungültige Felder anzeigen
+                            form.reportValidity();
+                            return;
+                        }
+
+                        // Prüfe die länge der Nachricht, min. 10 Zeichen
+                        const message = document.getElementById('message').value.trim();
+                        if (message.length < 10) {
+                            alert('Bitte geben Sie mindestens 10 Zeichen in der Nachricht ein.');
+                            return;
+                        }
+                            const firstname = document.getElementById('firstname').value.trim();
+                            const lastname = document.getElementById('lastname').value.trim();
+                            const email = document.getElementById('email').value.trim();
+
+                            alert(`Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet:\n${firstname} ${lastname} (${email})\n${message}`);
+
+                            // Optional: Formular zurücksetzen
+                            // form.reset();
+
+                        //form.reset();
+                    });
+                })();
+            </script>
+        </section>
+    </main>
+</body>
+</html>

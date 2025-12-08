@@ -35,3 +35,23 @@ td, th {
 th {
     text-align: left;
 }
+
+.inputArea label {
+    display:inline-block;
+    width: 100%;
+    height: auto;
+    background-color: red;
+}
+.inputArea input[type="text"],
+.inputArea input[type="email"],
+.inputArea select {
+    display: inline-block;         /* auf neue Zeile */
+position: absolute;
+    left: 10%;      /* kleine Abstände */
+    /* width: 100%;            volle Breite des Labels */
+}
+
+.inputDescription {
+    position: relative;
+    left: 270px;
+}

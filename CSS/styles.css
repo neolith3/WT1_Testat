@@ -8,8 +8,10 @@
 
 nav ul {
     list-style: none;
-    display: flex;  /* Macht die Liste horizontal */
-    gap: 20px;     /* Abstand zwischen den Einträgen */
+    display: flex;
+    /* Macht die Liste horizontal */
+    gap: 20px;
+    /* Abstand zwischen den Einträgen */
     padding: 0px;
     margin: 0.5em;
 
@@ -23,14 +25,17 @@ nav ul {
     height: auto;
 }
 
-table { border-collapse: collapse; }
-
-/* jede Zeile außer der ersten bekommt oben eine Linie */
-tr + tr td {
-  border-top: 1px solid #ccc;
+table {
+    border-collapse: collapse;
 }
 
-td, th {
+/* jede Zeile außer der ersten bekommt oben eine Linie */
+tr+tr td {
+    border-top: 1px solid #ccc;
+}
+
+td,
+th {
     padding: 4px;
 }
 
@@ -39,14 +44,16 @@ th {
 }
 
 .inputArea label {
-    display:inline-block;
+    display: inline-block;
     width: 100%;
     height: auto;
 }
+
 .inputArea input[type="text"],
 .inputArea input[type="email"],
 .inputArea select {
-    display: inline-block; /* auf neue Zeile */
+    display: inline-block;
+    /* auf neue Zeile */
     text-align: left;
     position: absolute;
     left: 10%;
@@ -63,16 +70,17 @@ th {
     left: 270px;
 }
 
-.newsArtricleSite{
+.newsArtricleSite {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-/* Google-Font */
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-   font-weight: 100; /* 100-900 */
-  font-style: normal;
+    /* Google-Font */
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    /* 100-900 */
+    font-style: normal;
 }
 
 .hiddenLink {

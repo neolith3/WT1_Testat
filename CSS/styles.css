@@ -40,15 +40,20 @@ th {
     display:inline-block;
     width: 100%;
     height: auto;
-    background-color: red;
 }
 .inputArea input[type="text"],
 .inputArea input[type="email"],
 .inputArea select {
-    display: inline-block;         /* auf neue Zeile */
-position: absolute;
-    left: 10%;      /* kleine Abstände */
-    /* width: 100%;            volle Breite des Labels */
+    display: inline-block; /* auf neue Zeile */
+    text-align: left;
+    position: absolute;
+    left: 10%;
+}
+
+/* Ergänzende Kommentare nach den Input-Feldern */
+.inputArea label>label {
+    width: 250px;
+    left: 250px;
 }
 
 .inputDescription {

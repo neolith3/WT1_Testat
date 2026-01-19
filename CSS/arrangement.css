@@ -1,6 +1,13 @@
 
 /* Allgemein */
 /* ------------------------------------------ */
+
+/* Horizontale Stauchung auf mobilen Geräten verhindern */
+@viewport {
+  width: device-width;
+  initial-scale: 1.0;
+}
+
 body {
     margin: 0 50px;
     padding: 0 15px;    
@@ -19,7 +26,6 @@ nav ul {
 /* News */
 /* ------------------------------------------ */
 .newsArticleButton {
-    width: 32%;
     height: auto;
     margin-bottom: 20px;
     padding: 10px;
@@ -33,4 +39,45 @@ nav ul {
     margin-bottom: 20px;
     padding: 10px;
     border: 2px solid #FFFFFF;
+}
+
+/* Float-Boxen */
+/* ------------------------------------------ */
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.newsArticleContainer>* {
+    float: left;
+}
+
+/* Skalierung auf Bildschirmgrösse (Mobile First) */
+/* ------------------------------------------ */
+
+/* Smartphone */
+/* ------------------------------------------ */
+.newsArticleButton {
+    width: 100%; 
+}
+
+/* Tablet */
+/* ------------------------------------------ */
+@media (min-width: 700px) {
+    .newsArticleButton {
+        width: 48%;
+    }
+
+    .newsArticleContainer>* {
+        margin-right: 1%;
+    }
+}
+
+/* PC */
+/* ------------------------------------------ */
+@media(min-width: 1050px) {
+    .newsArticleButton {
+        width: 32%;
+    } 
 }

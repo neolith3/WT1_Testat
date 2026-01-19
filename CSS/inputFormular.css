@@ -8,6 +8,8 @@
 .inputDescription {
     position: relative;
     left: 270px;
+    height: auto;
+    white-space: normal;
 }
 
 .inputArea input[type="text"],
@@ -24,4 +26,53 @@
 .inputArea label>label {
     width: 250px;
     left: 210px;
+    vertical-align: top;
+}
+
+select {
+    background-color: rgb(75, 75, 75);
+}
+
+input[type="submit"] {
+    background: none;
+    background-color: #1f8735;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background: none;
+    background-color: #811313;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inputArea textarea {
+    width: 100%;
+    cursor: cell;
+    resize: vertical;
+}
+
+/* Smartphone */
+/* ------------------------------------------ */
+.inputDescription{
+    max-width: 100px;
+}
+
+/* Tablet */
+/* ------------------------------------------ */
+@media (min-width: 530px) {
+.inputDescription{
+    max-width: 142px;
+}
+}
+
+/* PC */
+/* ------------------------------------------ */
+@media(min-width: 600px) {
+.inputDescription{
+    max-width: 212px;
+}
 }

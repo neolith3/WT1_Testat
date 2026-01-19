@@ -1,0 +1,36 @@
+
+/* Allgemein */
+/* ------------------------------------------ */
+body {
+    margin: 0 50px;
+    padding: 0 15px;    
+}
+
+/* Navigation */
+/* ------------------------------------------ */
+nav ul {
+    list-style: none;
+    display: flex; /* Macht die Liste horizontal */
+    gap: 20px; /* Abstand zwischen den Einträgen */
+    padding: 0 0 10px 0;
+    margin: 0.5em;
+}
+
+/* News */
+/* ------------------------------------------ */
+.newsArticleButton {
+    width: 32%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: left;
+    border: 2px solid #FFFFFF;
+}
+
+.newsArticle {
+    width: 30%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #FFFFFF;
+}

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Dark-Mode */
+/* ------------------------------------------ */
+* {
+    color: #FFFFFF;
+    
+    /* Hintergrundverlauf */
+    background: linear-gradient(160deg, #000000,  #343333);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+html {
+    /* entgegengesetzter Hintergrundverlauf */
+    background-size: 10px 100%;
+    background: linear-gradient(160deg, #343333, #000000);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hintergrund-Bild */
+/* ------------------------------------------ */
+.newsArticleButton {
+     background-image: url("../Pictures/techBackground.jpg");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
+}
+
+/* News */
+/* ------------------------------------------ */
+.newsArtricleSite {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Google-Font */
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;  /* Wertbereich: 100-900 */
+    font-style: normal;
+}
+
+.newsArticleButton * {
+    background: none;
+}   
+
+
+
+/* Allgemeine Textvorlagen */
+/* ------------------------------------------ */
+.hiddenLink {
+    text-decoration: none;
+    color: inherit;
+}

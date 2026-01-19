@@ -1,0 +1,27 @@
+
+.inputArea label {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.inputDescription {
+    position: relative;
+    left: 270px;
+}
+
+.inputArea input[type="text"],
+.inputArea input[type="email"],
+.inputArea select {
+    display: inline-block;
+    /* auf neue Zeile */
+    text-align: left;
+    position: absolute;
+    left: 160px;
+}
+
+/* Ergänzende Kommentare nach den Input-Feldern */
+.inputArea label>label {
+    width: 250px;
+    left: 210px;
+}

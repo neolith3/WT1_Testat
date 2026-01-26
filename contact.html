@@ -25,31 +25,51 @@
             <h2>Beschreibe uns dein Anliegen</h2>
             <section class="inputArea">
                 <form id="contactForm" action="#" method="post">
-                    <label for="firstname">Vorname:*
-                        <input type="text" id="firstname" name="firstname" required placeholder="John"></label><br><br>
 
-                    <label for="lastname">Nachname:*
-                        <input type="text" id="lastname" name="lastname" required placeholder="Doe"></label><br><br>
+                    <!-- Vorname -->
+                    <label for="firstname">
+                        Vorname:*
+                        <input type="text" id="firstname" name="firstname" required placeholder="John">
+                    </label>
 
-                    <label for="email">E-Mail:*
-                        <input type="email" id="email" name="email" required placeholder="john.doe@mail.com"> </input>
-                        <label class="inputDescription">(wird nicht öffentlich angezeigt)</label>
-                    </label><br><br>
+                    <!-- Nachname -->
+                    <label for="lastname">
+                        Nachname:*
+                        <input type="text" id="lastname" name="lastname" required placeholder="Doe">
+                    </label>
 
-                    <label for="consultationType">Kategorie:*
+                    <!-- E-Mail -->
+                    <label for="email">
+                        E-Mail:*
+                        <input type="email" id="email" name="email" required placeholder="john.doe@mail.com">
+                        <span class="inputDescription">(wird nicht öffentlich angezeigt)</span>
+                    </label>
+
+
+
+                    <!-- Kategorie -->
+                    <label for="consultationType">
+                        Kategorie:*
                         <select name="consultationType" id="consultationType">
                             <option value="topicRequest">Themenvorschlag</option>
                             <option value="support">Technischer Support</option>
                             <option value="feedback">Feedback zum Inhalt</option>
                         </select>
-                    </label><br><br>
+                    </label>
 
-                    <label for="message">Nachricht (min. 10 Zeichen):*</label><br>
-                    <textarea id="message" name="message" rows="4" cols="50" required
-                        placeholder="Mein Anliegen ..."></textarea><br><br>
+                    <!-- Nachricht -->
+                    <label for="message">
+                        Nachricht (min. 10 Zeichen):*
+                        <textarea id="message" name="message" rows="4" required
+                            placeholder="Mein Anliegen ..."></textarea>
+                    </label>
 
-                    <input type="submit" value="Absenden">
-                    <input type="reset" value="Abbrechen">
+                    <!-- Buttons -->
+                    <div class="buttonRow">
+
+                        <input type="submit" value="Absenden">
+                        <input type="reset" value="Abbrechen">
+                    </div>
                 </form>
 
             </section>

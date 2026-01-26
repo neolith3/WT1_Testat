@@ -1,78 +1,96 @@
+/* Formular-Container */
+* {
+    box-sizing: border-box;
+}
 
+.inputArea {
+    border-radius: 12px;
+}
+
+/* Jede Eingabegruppe als Box */
 .inputArea label {
-    display: inline-block;
-    width: 100%;
-    height: auto;
+    display: block;
+    margin-top: 1rem;
+    border-radius: 8px;
 }
 
+/* Beschreibungstext unter Inputs */
 .inputDescription {
-    position: relative;
-    left: 270px;
-    height: auto;
-    white-space: normal;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 0.2rem;
 }
 
-.inputArea input[type="text"],
-.inputArea input[type="email"],
+/* Input Hintergrund */
+.inputArea input {
+    background: none;
+    background-color: rgba(50, 50, 50, 0.7);
+}
+
+/* Inputs, Selects, Textareas */
+.inputArea input,
+.inputArea select,
+.inputArea textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #666;
+}
+
+/* Select Hintergrund */
 .inputArea select {
-    display: inline-block;
-    /* auf neue Zeile */
-    text-align: left;
-    position: absolute;
-    left: 160px;
+    background: none;
+    background-color: rgba(50, 50, 50, 0.7);
 }
 
-/* Ergänzende Kommentare nach den Input-Feldern */
-.inputArea label>label {
-    width: 250px;
-    left: 210px;
-    vertical-align: top;
+/* Textarea */
+.inputArea textarea {
+    background: none;
+    background-color: rgba(50, 50, 50, 0.7);
+    resize: vertical;
 }
 
-select {
-    background-color: rgb(75, 75, 75);
+/* Buttons */
+input[type="submit"],
+input[type="reset"] {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.buttonRow {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.buttonRow .card {
+    width: auto;
+    margin: 0;
 }
 
 input[type="submit"] {
     background: none;
     background-color: #1f8735;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 input[type="reset"] {
     background: none;
     background-color: #811313;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.inputArea textarea {
-    width: 100%;
-    cursor: cell;
-    resize: vertical;
+input[type="submit"]:hover {
+    background: none;
+    background-color: #2a9f45;
 }
 
-/* Smartphone */
-/* ------------------------------------------ */
-.inputDescription{
-    max-width: 100px;
-}
-
-/* Tablet */
-/* ------------------------------------------ */
-@media (min-width: 530px) {
-.inputDescription{
-    max-width: 142px;
-}
-}
-
-/* PC */
-/* ------------------------------------------ */
-@media(min-width: 600px) {
-.inputDescription{
-    max-width: 212px;
-}
+input[type="reset"]:hover {
+    background: none;
+    background-color: #a11a1a;
 }

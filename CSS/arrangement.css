@@ -24,6 +24,7 @@ nav ul {
     display: flex;
     /* Abstand zwischen den Einträgen */
     gap: 20px;
+    min-width: max-content;
     padding: 0 0 10px 0;
     margin: 0.5em;
 }

@@ -1,24 +1,29 @@
-
 /* Allgemein */
 /* ------------------------------------------ */
 
 /* Horizontale Stauchung auf mobilen Geräten verhindern */
 @viewport {
-  width: device-width;
-  initial-scale: 1.0;
+    width: device-width;
+    initial-scale: 1.0;
 }
 
 body {
     margin: 0 50px;
-    padding: 0 15px;    
+
+    padding-top: 1px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Navigation */
 /* ------------------------------------------ */
 nav ul {
     list-style: none;
-    display: flex; /* Macht die Liste horizontal */
-    gap: 20px; /* Abstand zwischen den Einträgen */
+    /* Macht die Liste horizontal */
+    display: flex;
+    /* Abstand zwischen den Einträgen */
+    gap: 20px;
     padding: 0 0 10px 0;
     margin: 0.5em;
 }
@@ -43,7 +48,7 @@ nav ul {
 
 /* Float-Boxen */
 /* ------------------------------------------ */
-.clearfix::after{
+.clearfix::after {
     content: "";
     clear: both;
     display: table;
@@ -53,14 +58,39 @@ nav ul {
     float: left;
 }
 
+/* Über-Mich */
+/* ------------------------------------------ */
+.cv-section {
+    margin-top: 2rem;
+}
+
+.cv-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.cv-row {
+    font-size: medium;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.cv-header {
+    display: none;
+}
+
 /* Skalierung auf Bildschirmgrösse (Mobile First) */
 /* ------------------------------------------ */
 
 /* Smartphone */
 /* ------------------------------------------ */
 .newsArticleButton {
-    width: 100%; 
+    width: 100%;
 }
+
 
 /* Tablet */
 /* ------------------------------------------ */
@@ -72,6 +102,19 @@ nav ul {
     .newsArticleContainer>* {
         margin-right: 1%;
     }
+
+    .cv-row {
+        grid-template-columns: 2fr 2fr 2fr;
+        gap: 1rem;
+        padding: 0.5rem 0.75rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .cv-header {
+        display: grid;
+        border-bottom: 2px solid #ccc;
+    }
+
 }
 
 /* PC */
@@ -79,5 +122,5 @@ nav ul {
 @media(min-width: 1050px) {
     .newsArticleButton {
         width: 32%;
-    } 
+    }
 }

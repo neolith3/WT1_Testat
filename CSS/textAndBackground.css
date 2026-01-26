@@ -4,9 +4,9 @@
 /* ------------------------------------------ */
 * {
     color: #FFFFFF;
-    
+
     /* Hintergrundverlauf */
-    background: linear-gradient(160deg, #000000,  #343333);
+    background: linear-gradient(160deg, #000000, #343333);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@ html {
 /* Hintergrund-Bild */
 /* ------------------------------------------ */
 .newsArticleButton {
-     background-image: url("../Pictures/techBackground.jpg");
+    background-image: url("../Pictures/techBackground.jpg");
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,13 +41,14 @@ html {
     /* Google-Font */
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;  /* Wertbereich: 100-900 */
+    /* Wertbereich: 100-900 */
+    font-weight: 100;
     font-style: normal;
 }
 
 .newsArticleButton * {
     background: none;
-}   
+}
 
 .newsArticleButton:focus {
     outline: 3px solid #185eae;
@@ -55,6 +56,35 @@ html {
     outline-offset: 4px;
     border-radius: 4px;
 }
+
+/* Über mich */
+/* ------------------------------------------ */
+.cv-row,
+.cv-row * {
+    background: none;
+}
+
+.cv-header {
+    /* leicht abgedunkelt */
+    background-color: rgba(0, 0, 0, 0.35);
+    font-weight: bold;
+}
+
+.cv-row:nth-child(odd):not(.cv-header) {
+    /* leicht aufgehellt */
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.cv-row:nth-child(even):not(.cv-header) {
+    /* etwas weniger hell */
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.cv-row:hover:not(.cv-header) {
+    /* stärkerer Hover-Effekt */
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
 
 /* Allgemeine Textvorlagen */
 /* ------------------------------------------ */

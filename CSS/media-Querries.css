@@ -3,18 +3,15 @@
 /* ------------------------------------------ */
 /* News */
 /* ------------------------------------------ */
-.newsArticleButton {
+.newsArticleButton, .newsArticle {
   height: auto;
   padding: 10px;
-  text-align: left;
   border: 2px solid #FFFFFF;
+  text-align: left;
 }
 
 .newsArticle {
-  height: auto;
   margin-bottom: 20px;
-  padding: 10px;
-  border: 2px solid #FFFFFF;
 }
 
 /* Float-Boxen */
@@ -39,7 +36,7 @@
 
 /* Smartphone */
 /* ------------------------------------------ */
-.newsArticleButton {
+.newsArticleButton, .newsArticle {
   width: 100%;
 }
 

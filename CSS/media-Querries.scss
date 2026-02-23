@@ -7,14 +7,12 @@ $Abstand: 10px;
 .newsArticleButton {
     height: auto;
     padding: 10px;
-    text-align: left;
     border: 2px solid #FFFFFF;
+    text-align: left;
 }
 
 .newsArticle {
-    height: auto;
-    padding: 10px;
-    border: 2px solid #FFFFFF;
+    @extend .newsArticleButton;
     margin-bottom: 20px;
 }
 

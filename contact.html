@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="CH-DE">
+<html lang="de-CH">
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="CSS/styles.css" />
@@ -20,114 +20,110 @@
       </ul>
     </nav>
     <main>
-      <section>
+      <section class="inputArea">
         <h2>Beschreibe uns dein Anliegen</h2>
-        <section class="inputArea">
-          <form id="contactForm" action="#" method="post">
-            <!-- Vorname -->
-            <label for="firstname">
-              Vorname:*
-              <input
-                type="text"
-                id="firstname"
-                name="firstname"
-                required
-                placeholder="John"
-              />
-            </label>
+        <form id="contactForm" action="#" method="post">
+          <!-- Vorname -->
+          <label for="firstname">
+            Vorname:*
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              required
+              placeholder="John"
+            />
+          </label>
 
-            <!-- Nachname -->
-            <label for="lastname">
-              Nachname:*
-              <input
-                type="text"
-                id="lastname"
-                name="lastname"
-                required
-                placeholder="Doe"
-              />
-            </label>
+          <!-- Nachname -->
+          <label for="lastname">
+            Nachname:*
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              required
+              placeholder="Doe"
+            />
+          </label>
 
-            <!-- E-Mail -->
-            <label for="email">
-              E-Mail:*
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="john.doe@mail.com"
-              />
-              <span class="inputDescription"
-                >(wird nicht öffentlich angezeigt)</span
-              >
-            </label>
+          <!-- E-Mail -->
+          <label for="email">
+            E-Mail:*
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="john.doe@mail.com"
+            />
+            <span class="inputDescription"
+              >(wird nicht öffentlich angezeigt)</span
+            >
+          </label>
 
-            <!-- Kategorie -->
-            <label for="consultationType">
-              Kategorie:*
-              <select name="consultationType" id="consultationType">
-                <option value="topicRequest">Themenvorschlag</option>
-                <option value="support">Technischer Support</option>
-                <option value="feedback">Feedback zum Inhalt</option>
-              </select>
-            </label>
+          <!-- Kategorie -->
+          <label for="consultationType">
+            Kategorie:*
+            <select name="consultationType" id="consultationType">
+              <option value="topicRequest">Themenvorschlag</option>
+              <option value="support">Technischer Support</option>
+              <option value="feedback">Feedback zum Inhalt</option>
+            </select>
+          </label>
 
-            <!-- Nachricht -->
-            <label for="message">
-              Nachricht (min. 10 Zeichen):*
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-                placeholder="Mein Anliegen ..."
-              ></textarea>
-            </label>
+          <!-- Nachricht -->
+          <label for="message">
+            Nachricht (min. 10 Zeichen):*
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Mein Anliegen ..."
+            ></textarea>
+          </label>
 
-            <!-- Buttons -->
-            <div class="buttonRow">
-              <input type="submit" value="Absenden" />
-              <input type="reset" value="Abbrechen" />
-            </div>
-          </form>
-        </section>
-        <script>
-          (function () {
-            const form = document.getElementById("contactForm");
-            form.addEventListener("submit", function (event) {
-              event.preventDefault();
-
-              if (!form.checkValidity()) {
-                // Native Browser Meldungen für ungültige Felder anzeigen
-                form.reportValidity();
-                return;
-              }
-
-              // Prüfe die länge der Nachricht, min. 10 Zeichen
-              const message = document.getElementById("message").value.trim();
-              if (message.length < 10) {
-                alert(
-                  "Bitte geben Sie mindestens 10 Zeichen in der Nachricht ein.",
-                );
-                return;
-              }
-              const firstname = document
-                .getElementById("firstname")
-                .value.trim();
-              const lastname = document.getElementById("lastname").value.trim();
-              const email = document.getElementById("email").value.trim();
-
-              alert(
-                `Vielen Dank für das Erfassen Ihrer Nachricht! Die Nachricht wird weder gespeichert noch weiterverarbeitet:\n${firstname} ${lastname} (${email})\n${message}`,
-              );
-            });
-            form.addEventListener("reset", function (event) {
-              form.reset();
-            });
-          })();
-        </script>
+          <!-- Buttons -->
+          <div class="buttonRow">
+            <input type="submit" value="Absenden" />
+            <input type="reset" value="Abbrechen" />
+          </div>
+        </form>
       </section>
+      <script>
+        (function () {
+          const form = document.getElementById("contactForm");
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!form.checkValidity()) {
+              // Native Browser Meldungen für ungültige Felder anzeigen
+              form.reportValidity();
+              return;
+            }
+
+            // Prüfe die länge der Nachricht, min. 10 Zeichen
+            const message = document.getElementById("message").value.trim();
+            if (message.length < 10) {
+              alert(
+                "Bitte geben Sie mindestens 10 Zeichen in der Nachricht ein.",
+              );
+              return;
+            }
+            const firstname = document.getElementById("firstname").value.trim();
+            const lastname = document.getElementById("lastname").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            alert(
+              `Vielen Dank für das Erfassen Ihrer Nachricht! Die Nachricht wird weder gespeichert noch weiterverarbeitet:\n${firstname} ${lastname} (${email})\n${message}`,
+            );
+          });
+          form.addEventListener("reset", function (event) {
+            form.reset();
+          });
+        })();
+      </script>
     </main>
   </body>
 </html>

@@ -3,48 +3,48 @@
 
 /* Horizontale Stauchung auf mobilen Geräten verhindern */
 @viewport {
-    width: device-width;
-    initial-scale: 1.0;
+  width: device-width;
+  initial-scale: 1;
 }
 
 body {
-    margin: 0 50px;
+  margin: 0 50px;
 
-    padding-top: 1px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-top: 1px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Navigation */
 /* ------------------------------------------ */
 nav ul {
-    list-style: none;
-    /* Macht die Liste horizontal */
-    display: flex;
-    /* Abstand zwischen den Einträgen */
-    gap: 20px;
-    min-width: max-content;
-    padding: 0 0 10px 0;
-    margin: 0.5em;
+  list-style: none;
+  /* Macht die Liste horizontal */
+  display: flex;
+  /* Abstand zwischen den Einträgen */
+  gap: 20px;
+  min-width: max-content;
+  padding: 0 0 10px 0;
+  margin: 0.5em;
 }
 
 /* Float-Boxen */
 /* ------------------------------------------ */
 .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* Über-Mich */
 /* ------------------------------------------ */
 .cv-section {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .cv-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }

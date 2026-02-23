@@ -1,111 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="CH-DE">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="CSS/styles.css" />
     <title>Kontaktformular</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Kontakt</h1>
+      <h1>Kontakt</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="about.html">Über mich</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li>Kontakt</li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="about.html">Über mich</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li>Kontakt</li>
+      </ul>
     </nav>
     <main>
-        <section>
-            <h2>Beschreibe uns dein Anliegen</h2>
-            <section class="inputArea">
-                <form id="contactForm" action="#" method="post">
+      <section>
+        <h2>Beschreibe uns dein Anliegen</h2>
+        <section class="inputArea">
+          <form id="contactForm" action="#" method="post">
+            <!-- Vorname -->
+            <label for="firstname">
+              Vorname:*
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                required
+                placeholder="John"
+              />
+            </label>
 
-                    <!-- Vorname -->
-                    <label for="firstname">
-                        Vorname:*
-                        <input type="text" id="firstname" name="firstname" required placeholder="John">
-                    </label>
+            <!-- Nachname -->
+            <label for="lastname">
+              Nachname:*
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                required
+                placeholder="Doe"
+              />
+            </label>
 
-                    <!-- Nachname -->
-                    <label for="lastname">
-                        Nachname:*
-                        <input type="text" id="lastname" name="lastname" required placeholder="Doe">
-                    </label>
+            <!-- E-Mail -->
+            <label for="email">
+              E-Mail:*
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="john.doe@mail.com"
+              />
+              <span class="inputDescription"
+                >(wird nicht öffentlich angezeigt)</span
+              >
+            </label>
 
-                    <!-- E-Mail -->
-                    <label for="email">
-                        E-Mail:*
-                        <input type="email" id="email" name="email" required placeholder="john.doe@mail.com">
-                        <span class="inputDescription">(wird nicht öffentlich angezeigt)</span>
-                    </label>
+            <!-- Kategorie -->
+            <label for="consultationType">
+              Kategorie:*
+              <select name="consultationType" id="consultationType">
+                <option value="topicRequest">Themenvorschlag</option>
+                <option value="support">Technischer Support</option>
+                <option value="feedback">Feedback zum Inhalt</option>
+              </select>
+            </label>
 
+            <!-- Nachricht -->
+            <label for="message">
+              Nachricht (min. 10 Zeichen):*
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                placeholder="Mein Anliegen ..."
+              ></textarea>
+            </label>
 
-
-                    <!-- Kategorie -->
-                    <label for="consultationType">
-                        Kategorie:*
-                        <select name="consultationType" id="consultationType">
-                            <option value="topicRequest">Themenvorschlag</option>
-                            <option value="support">Technischer Support</option>
-                            <option value="feedback">Feedback zum Inhalt</option>
-                        </select>
-                    </label>
-
-                    <!-- Nachricht -->
-                    <label for="message">
-                        Nachricht (min. 10 Zeichen):*
-                        <textarea id="message" name="message" rows="4" required
-                            placeholder="Mein Anliegen ..."></textarea>
-                    </label>
-
-                    <!-- Buttons -->
-                    <div class="buttonRow">
-
-                        <input type="submit" value="Absenden">
-                        <input type="reset" value="Abbrechen">
-                    </div>
-                </form>
-
-            </section>
-            <script>
-                (function () {
-                    const form = document.getElementById('contactForm');
-                    form.addEventListener('submit', function (event) {
-
-                        event.preventDefault();
-
-                        if (!form.checkValidity()) {
-                            // Native Browser Meldungen für ungültige Felder anzeigen
-                            form.reportValidity();
-                            return;
-                        }
-
-                        // Prüfe die länge der Nachricht, min. 10 Zeichen
-                        const message = document.getElementById('message').value.trim();
-                        if (message.length < 10) {
-                            alert('Bitte geben Sie mindestens 10 Zeichen in der Nachricht ein.');
-                            return;
-                        }
-                        const firstname = document.getElementById('firstname').value.trim();
-                        const lastname = document.getElementById('lastname').value.trim();
-                        const email = document.getElementById('email').value.trim();
-
-                        alert(`Vielen Dank für das Erfassen Ihrer Nachricht! Die Nachricht wird weder gespeichert noch weiterverarbeitet:\n${firstname} ${lastname} (${email})\n${message}`);
-
-                    });
-                    form.addEventListener('reset', function (event) {
-                        form.reset();
-                    });
-                })();
-            </script>
+            <!-- Buttons -->
+            <div class="buttonRow">
+              <input type="submit" value="Absenden" />
+              <input type="reset" value="Abbrechen" />
+            </div>
+          </form>
         </section>
-    </main>
-</body>
+        <script>
+          (function () {
+            const form = document.getElementById("contactForm");
+            form.addEventListener("submit", function (event) {
+              event.preventDefault();
 
+              if (!form.checkValidity()) {
+                // Native Browser Meldungen für ungültige Felder anzeigen
+                form.reportValidity();
+                return;
+              }
+
+              // Prüfe die länge der Nachricht, min. 10 Zeichen
+              const message = document.getElementById("message").value.trim();
+              if (message.length < 10) {
+                alert(
+                  "Bitte geben Sie mindestens 10 Zeichen in der Nachricht ein.",
+                );
+                return;
+              }
+              const firstname = document
+                .getElementById("firstname")
+                .value.trim();
+              const lastname = document.getElementById("lastname").value.trim();
+              const email = document.getElementById("email").value.trim();
+
+              alert(
+                `Vielen Dank für das Erfassen Ihrer Nachricht! Die Nachricht wird weder gespeichert noch weiterverarbeitet:\n${firstname} ${lastname} (${email})\n${message}`,
+              );
+            });
+            form.addEventListener("reset", function (event) {
+              form.reset();
+            });
+          })();
+        </script>
+      </section>
+    </main>
+  </body>
 </html>

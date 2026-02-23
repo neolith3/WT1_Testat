@@ -1,20 +1,19 @@
-
 /* Informations-Tabellen */
 /* ------------------------------------------ */
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 /* jede Zeile außer der ersten bekommt oben eine Linie */
-tr+tr td {
-    border-top: 1px solid #ccc;
+tr + tr td {
+  border-top: 1px solid #ccc;
 }
 
 td,
 th {
-    padding: 4px;
+  padding: 4px;
 }
 
 th {
-    text-align: left;
+  text-align: left;
 }

@@ -1,9 +1,16 @@
+$slectedColor: #185eae;
 
-    $slectedColor: #185eae;
+$backgroundGradientAngle: 160deg;
+$backgroundColorDark: #000000;
+$backgroundColorBright: #343333;
 
-    $backgroundGradientAngle: 160deg;
-    $backgroundColorDark: #000000;
-    $backgroundColorBright: #343333;
-
-$backgroundGradientDirectionDarkToBright: linear-gradient($backgroundGradientAngle, $backgroundColorDark, $backgroundColorBright);
-$backgroundGradientDirectionBrightToDark: linear-gradient($backgroundGradientAngle, $backgroundColorBright, $backgroundColorDark);
+$backgroundGradientDirectionDarkToBright: linear-gradient(
+  $backgroundGradientAngle,
+  $backgroundColorDark,
+  $backgroundColorBright
+);
+$backgroundGradientDirectionBrightToDark: linear-gradient(
+  $backgroundGradientAngle,
+  $backgroundColorBright,
+  $backgroundColorDark
+);

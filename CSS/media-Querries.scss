@@ -5,72 +5,69 @@ $Abstand: 10px;
 /* News */
 /* ------------------------------------------ */
 .newsArticleButton {
-    height: auto;
-    padding: 10px;
-    border: 2px solid #FFFFFF;
-    text-align: left;
+  height: auto;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  text-align: left;
 }
 
 .newsArticle {
-    @extend .newsArticleButton;
-    margin-bottom: 20px;
+  @extend .newsArticleButton;
+  margin-bottom: 20px;
 }
 
 /* Float-Boxen */
 /* ------------------------------------------ */
-.newsArticleContainer{
-    display: grid;
-    gap: $Abstand;
+.newsArticleContainer {
+  display: grid;
+  gap: $Abstand;
 }
-
 
 /* Über-Mich */
 .cv-row {
-    font-size: medium;
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #ddd;
+  font-size: medium;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
 }
 
 .cv-header {
-    display: none;
+  display: none;
 }
 
 /* Smartphone */
 /* ------------------------------------------ */
 .newsArticleButton {
-    width: 100%;
+  width: 100%;
 }
 
 /* Tablet */
 /* ------------------------------------------ */
 @media (min-width: 700px) {
+  .newsArticleContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: $Abstand;
+  }
 
-    .newsArticleContainer{
-        grid-template-columns: 1fr 1fr;
-        gap: $Abstand;
-    }
+  .cv-row {
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #ddd;
+  }
 
-    .cv-row {
-        grid-template-columns: 2fr 2fr 2fr;
-        gap: 1rem;
-        padding: 0.5rem 0.75rem;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .cv-header {
-        display: grid;
-        border-bottom: 2px solid #ccc;
-    }
-
+  .cv-header {
+    display: grid;
+    border-bottom: 2px solid #ccc;
+  }
 }
 
 /* PC */
 /* ------------------------------------------ */
-@media(min-width: 1050px) {
-    .newsArticleContainer{
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: $Abstand;
-    }
+@media (min-width: 1050px) {
+  .newsArticleContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: $Abstand;
+  }
 }

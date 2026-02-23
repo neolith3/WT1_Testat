@@ -29,34 +29,12 @@ nav ul {
     margin: 0.5em;
 }
 
-/* News */
-/* ------------------------------------------ */
-.newsArticleButton {
-    height: auto;
-    margin-bottom: 20px;
-    padding: 10px;
-    text-align: left;
-    border: 2px solid #FFFFFF;
-}
-
-.newsArticle {
-    width: 30%;
-    height: auto;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 2px solid #FFFFFF;
-}
-
 /* Float-Boxen */
 /* ------------------------------------------ */
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
-}
-
-.newsArticleContainer>* {
-    float: left;
 }
 
 /* Über-Mich */
@@ -69,59 +47,4 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-}
-
-.cv-row {
-    font-size: medium;
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #ddd;
-}
-
-.cv-header {
-    display: none;
-}
-
-/* Skalierung auf Bildschirmgrösse (Mobile First) */
-/* ------------------------------------------ */
-
-/* Smartphone */
-/* ------------------------------------------ */
-.newsArticleButton {
-    width: 100%;
-}
-
-
-/* Tablet */
-/* ------------------------------------------ */
-@media (min-width: 700px) {
-    .newsArticleButton {
-        width: 48%;
-    }
-
-    .newsArticleContainer>* {
-        margin-right: 1%;
-    }
-
-    .cv-row {
-        grid-template-columns: 2fr 2fr 2fr;
-        gap: 1rem;
-        padding: 0.5rem 0.75rem;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .cv-header {
-        display: grid;
-        border-bottom: 2px solid #ccc;
-    }
-
-}
-
-/* PC */
-/* ------------------------------------------ */
-@media(min-width: 1050px) {
-    .newsArticleButton {
-        width: 32%;
-    }
 }

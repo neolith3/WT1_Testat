@@ -1,10 +1,3 @@
-console.log("Hello World!");
-
-// Event-Handler
-// document.getElementById("testButton").addEventListener("click", function () {
-//   document.getElementById("titelDiv").innerText = "Clicked!";
-// });
-
 window.addEventListener("load", function () {
   console.log("Page loaded!");
   const button = document.getElementById("testButton");
@@ -23,19 +16,6 @@ window.addEventListener("load", function () {
           newDiv.innerHTML = articel.Titel;
           newsArticelArea.appendChild(newDiv);
 
-          // const link = document.createElement("a");
-          // link.href = "../articel.html";
-          // link.textContent = "Mehr erfahren";
-          // newsArticelArea.appendChild(link);
-
-          // const articelDetailSite = document.getElementById("articel.html");
-          // articelDetailSite.getElementById("articelPageTitel").innerText =
-          //   articel.Titel;
-          // articelDetailSite.getElementById("articelHeaderTitel").innerText =
-          //   articel.Titel;
-          // articelDetailSite.getElementById("articelText").innerText =
-          //   articel.Text;
-
           const link = document.createElement("a");
           link.href =
             "../articel.html?Titel=" +
@@ -44,14 +24,6 @@ window.addEventListener("load", function () {
             encodeURIComponent(articel.Text);
           link.textContent = "Mehr erfahren";
           newsArticelArea.appendChild(link);
-
-          // const articelDetailSite = document.getElementById("articel.html");
-          // articelDetailSite.getElementById("articelPageTitel").innerText =
-          //   articel.Titel;
-          // articelDetailSite.getElementById("articelHeaderTitel").innerText =
-          //   articel.Titel;
-          // articelDetailSite.getElementById("articelText").innerText =
-          //   articel.Text;
         }
       });
     articles.reduce((uebertrag, x) => uebertrag + x, 0); // 0 = Startwert, Übertrag in die Berechnung
